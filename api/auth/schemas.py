@@ -8,6 +8,8 @@ class UserRead(schemas.BaseUser[uuid.UUID]):
     id: int
     username: Optional[str] = None
     email: str
+    status: bool
+    FIO: str = ''
 
 
 class UserCreate(schemas.BaseUserCreate):
@@ -20,3 +22,5 @@ class UserUpdate(schemas.BaseUserUpdate):
     id: int
     username: Optional[str] = None
     email: str
+    status: bool
+    FIO: str

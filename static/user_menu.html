@@ -259,6 +259,8 @@
             <div class="cell">Email</div>
             <div class="cell">Role</div>
             <div class="cell">Actions</div>
+            <div class="cell">Status</div>
+            <div class="cell">FIO</div>
         </div>
         {% for user in all_users %}
         <div class="row">
@@ -270,6 +272,8 @@
                 <button class="delete-btn" onclick="deleteUser('{{ url_for('delete_user', id=user.id) }}')">Delete</button>
                 <button class="group-list-btn" data-user-id="{{ user.id }}" data-user-email="{{ user.email }}" onclick="showGroupList(this)">Group List</button>
             </div>
+            <div class="cell"> {{ user.status }}</div>
+            <div class="cell"> {{ user.FIO }}</div>
         </div>
         {% endfor %}
     </div>
